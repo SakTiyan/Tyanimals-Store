@@ -4,11 +4,12 @@ Tyanimals Store adalah aplikasi web sederhana berbasis **PHP native** yang diran
 Project ini dibuat sebagai latihan pengembangan web dengan fokus pada struktur backend yang jelas dan alur transaksi yang teratur.
 
 ## ✨ Fitur Utama
-- Tampilan halaman produk
-- Proses pemesanan (order)
+- Halaman Utama (Landing Page)
+- Form Login dan Registrasi
+- Tampilan Produk
+- Proses Pemesanan
 - Integrasi pembayaran (Midtrans)
-- Struktur kode sederhana dan mudah dipahami
-- Cocok untuk pembelajaran backend PHP
+- Antarmuka Sederhana dan Responsif
 
 ## 🛠️ Teknologi yang Digunakan
 - **HTML, CSS & JavaScript**
