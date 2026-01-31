@@ -1,0 +1,283 @@
+:root {
+    --Tombol: #4a8861;
+    --elemen: #afd9ba;
+    --bg: #faf6f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 50px;
+    background-color: var(--bg);
+}
+
+/* Loading Screen Starts */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid var(--elemen);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animated-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fdd792;
+    animation: fadeInUp 1s ease-out infinite alternate;
+}
+
+span {
+    color: #ddeedf;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0.3;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main-content {
+    display: none;
+    padding: 20px;
+}
+
+/* Loading Screen Ends */
+
+/* Register Starts */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    gap: 50px;
+}
+
+.regi-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regi-img img {
+    width: 100%;
+    max-width: 570px;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    height: auto;
+    object-fit: contain;
+}
+
+.wrapper {
+    margin-right: 50px;
+    position: relative;
+    width: 90vh;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 70px 70px;
+    border: 1px solid var(--elemen);
+    box-shadow: 0 8px 15px var(--elemen);
+}
+
+.wrapper .header-Registration {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    padding: 16px 24px;
+    background-color: var(--Tombol);
+    cursor: pointer;
+    border-radius: 0 0 40px 40px;
+}
+
+.header-Registration .Registration {
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 2px solid var(--elemen);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: var(--elemen);
+}
+
+.input-box a {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--elemen);
+    cursor: pointer;
+}
+
+/* Hilangkan Efek Eye */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-password-toggle-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background-color: var(--Tombol);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+.wrapper .btn:hover {
+    background-color: var(--elemen);
+}
+
+.wrapper .login-link {
+    text-decoration: none;
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.login-link p a {
+    color: var(--Tombol);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link p a:hover {
+    text-decoration: underline;
+}
+
+.input-message {
+    font-size: 13px;
+    color: red;
+    margin-top: 4px;
+    padding-left: 10px;
+}
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Register Ends */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .container {
+        position: relative;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+    }
+
+    .form-side {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .regi-img {
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 40px 30px;
+        margin: 0 auto;
+    }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}

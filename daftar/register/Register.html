@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Tyanimals Store</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="StyleRegister.css">
+</head>
+
+<body>
+    <!-- Loading Screen Starts -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p class="animated-text">Ty<span>an</span>imals Store</p>
+    </div>
+    <!-- Loading Screen Ends -->
+
+    <!-- Register Starts -->
+    <div class="container">
+        <div class="regi-img">
+            <img src="../../image/Register.png">
+        </div>
+        <div class="form-side">
+            <div class="wrapper">
+                <form onsubmit="return register(event)">
+                    <div class="header-Registration">
+                        <div class="Registration">Registration</div>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="regUsername" placeholder="Username">
+                        <a href="#"><i data-feather="user"></i></a>
+                        <p id="usernameMessage" class="input-message"></p>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="regEmail" placeholder="Email">
+                        <a href="#"><i data-feather="mail"></i></a>
+                        <p id="emailMessage" class="input-message"></p>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" id="regPassword" placeholder="Password">
+                        <a href="#"><i id="lockIcon" data-feather="lock" onclick="togglePassword()"></i></a>
+                        <p id="passwordMessage" class="input-message"></p>
+                    </div>
+
+                    <p id="message"></p>
+
+                    <button type="submit" class="btn">Sign Up</button>
+
+                    <div class="login-link">
+                        <p>Already have an account? <a href="../login/Login.html">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Register Ends -->
+
+    <script src="../Register/ScriptRegister.js"></script>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
