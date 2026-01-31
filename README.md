@@ -13,6 +13,7 @@ Project ini dibuat sebagai latihan pengembangan web dengan fokus pada struktur b
 
 ## 🛠️ Teknologi yang Digunakan
 - **HTML, CSS & JavaScript**
+- **Bootstrap**
 - **PHP Native**
 - **Alpine Js**
 - **Midtrans Payment Gateway**
